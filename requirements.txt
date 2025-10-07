@@ -1,0 +1,4 @@
+uv
+Django
+cookiecutter
+django-tailwind[reload]
