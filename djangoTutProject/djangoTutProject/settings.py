@@ -73,7 +73,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'djangoTutProject.wsgi.application'
-
+NPM_BIN_PATH='/home/manav/.nvm/versions/node/v22.0.0/bin/npm'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
@@ -122,6 +122,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
+MEDIA_URL = '/images/'
+MEDIA_ROOT=BASE_DIR / 'static/images'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 

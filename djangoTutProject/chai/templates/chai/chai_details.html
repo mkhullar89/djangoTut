@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title%}
+{% if detail%}
+    <title>{{ detail.name }}</title>
+{% else %}
+    <title></title>
+{% endif %}
+{% endblock title%}
+
+{% block content %}
+{% if chai.description %}
+<p>Here is the chai detail: {{ chai.description }}</p>
+{% else %}
+<p>No chai detail available.</p>
+{% endif %}
+{% endblock content%}

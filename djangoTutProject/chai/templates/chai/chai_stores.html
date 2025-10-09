@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content%}
+<form method="post" class='border p-4 m-4'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+    {% if stores %}
+        <h2 class="text-2xl font-bold mt-4">Available Stores:</h2>
+        <ul class="list-disc list-inside">
+            {% for store in stores %}
+                <li class="mt-2">{{ store.name }} - {{ store.location }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</form>
+    {% endblock content %}

@@ -6,4 +6,17 @@
 {% block content %}
 <h1>This is All Chai Page</h1>
 <p>This is a simple Django template example.</p>
+{% if chai %}
+    <ul>
+        <div class="grid grid-cols-3 gap-4 m-4">
+            {% for item in chai %}
+                <li class='text-2xl font-bold'>{{ item.name }} - {{ item.choices }} - {{ item.date }}</li>
+               
+                <li class='mb-1'>{{item.choices}} {{ item.price }} </li>
+                <li><a href="{% url 'chai_detail' item.id %}">{{item.id}}</a></li>
+                <li><img src="{{ item.image.url }}" alt="{{ item.name }}" width="200"></li>
+    {% endfor %}
+        </div>
+    </ul>
+{% endif %}
 {% endblock content %}
